@@ -1,3 +1,10 @@
+# Nama  : Kefilino Khalifa Filardi
+#       : Aithra Junia Bouty		
+# NPM   : 140810180028
+#       : 140810180054
+# Kelas : B
+# Desc  : Program untuk klasterisasi menggunakan algoritma K-Means dan mencari hasil klasterisasi serta visualisasinya.
+
 import math
 import matplotlib
 import matplotlib.pyplot as plt
@@ -76,7 +83,6 @@ def sse(data, centroid):
 
 # meng-import data sheet 'Data1' dan 'Data2' menjadi variabel
 data_1 = pd.read_excel('Data.xlsx', sheet_name='Data1').drop('No', axis=1)
-data_2 = pd.read_excel('Data.xlsx', sheet_name='Data2').drop('No', axis=1)
 
 # inisialisasi list kosong
 t = list()
