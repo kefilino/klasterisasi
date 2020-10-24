@@ -82,6 +82,14 @@ data_2 = pd.read_excel('Data.xlsx', sheet_name='Data2').drop('No', axis=1)
 t = list()
 s = list()
 
+# visualisasi klaster dengan k = 12 menggunakan plot scatter
+data = data_1
+k_means(data, 12, 10)
+ax = data.plot.scatter(x='X', y='Y', c='Klaster', colormap='viridis')
+plt.xlabel('Koordinasi X')
+plt.ylabel('Koordinasi Y')
+plt.title('Visualisasi Klaster K = 12 dengan Centroid Awal Random')
+
 # iterasi untuk k=1 sampai k=5
 for i in range(50):
     # menambahkan nilai index k=i kedalam list t
@@ -90,6 +98,7 @@ for i in range(50):
     s.append(k_means(data_1, i+1, 10))
 
 # membuat plot menggunakan library matplotlib untuk visualisasi grafik korelasi antara nilai k dengan sse
+plt.figure()
 plt.plot(s, t)
 plt.xlim(left=300000, right=0)
 plt.yticks(np.arange(1, len(t)+1, 1))
